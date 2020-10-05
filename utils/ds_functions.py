@@ -33,7 +33,7 @@ def set_axes(xvalues: list, ax: plt.Axes = None, title: str = '', xlabel: str = 
         ax.set_ylim(0.0, 1.0)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
-    ax.set_xticklabels(xvalues, fontsize='small', ha='center')
+    #ax.set_xticklabels(xvalues, fontsize='small', ha='center')
 
     return ax
 
@@ -44,7 +44,7 @@ def set_locators(xvalues: list, ax: plt.Axes = None):
         ax.xaxis.set_major_locator(locator)
         ax.xaxis.set_major_formatter(mdates.AutoDateFormatter(locator, defaultfmt='%Y-%m-%d'))
     else:
-        ax.set_xticks(xvalues)
+        #ax.set_xticks(xvalues)
         ax.set_xlim(xvalues[0], xvalues[-1])
 
     return ax
