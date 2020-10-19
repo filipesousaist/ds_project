@@ -23,7 +23,7 @@ def choose_grid(nr):
         return (nr // NR_COLUMNS, NR_COLUMNS) if nr % NR_COLUMNS == 0 else (nr // NR_COLUMNS + 1, NR_COLUMNS)
 
 
-def set_axes(xvalues: list, ax: plt.Axes = None, title: str = '', xlabel: str = '', ylabel: str = '', percentage=False):
+def set_axes(xvalues: list, ax: plt.Axes = None, title: str = '', xlabel: str = '', ylabel: str = '', percentage=False, showXTickLabels: bool = False):
     if ax is None:
         ax = plt.gca()
     ax.set_title(title)
@@ -33,7 +33,8 @@ def set_axes(xvalues: list, ax: plt.Axes = None, title: str = '', xlabel: str = 
         ax.set_ylim(0.0, 1.0)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
-    #ax.set_xticklabels(xvalues, fontsize='small', ha='center')
+    if (showXTickLabels):
+        ax.set_xticklabels(xvalues, fontsize='small', ha='center')
 
     return ax
 
@@ -76,8 +77,8 @@ def bar_chart(xvalues: list, yvalues: list, ax: plt.Axes = None, title: str = ''
 
 
 def multiple_bar_chart(xvalues: list, yvalues: dict, ax: plt.Axes = None, title: str = '',
-                       xlabel: str = '', ylabel: str = '', percentage=False):
-    ax = set_axes(xvalues, ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, percentage=percentage)
+                       xlabel: str = '', ylabel: str = '', percentage=False, showXTickLabels: bool = False):
+    ax = set_axes(xvalues, ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, percentage=percentage, showXTickLabels=showXTickLabels)
 
     x = np.arange(len(xvalues))  # the label locations
 
@@ -119,7 +120,7 @@ def plot_confusion_matrix(cnf_matrix: np.ndarray, classes_names: np.ndarray,
         ax.text(j, i, format(cm[i, j], fmt), color='w', horizontalalignment="center")
 
 
-def plot_evaluation_results(labels: np.ndarray, trn_y, prd_trn, tst_y, prd_tst):
+def plot_evaluation_results(labels: np.ndarray, trn_y, prd_trn, tst_y, prd_tst, showXTickLabels: bool = False):
     cnf_mtx_trn = metrics.confusion_matrix(trn_y, prd_trn, labels)
     tn_trn, fp_trn, fn_trn, tp_trn = cnf_mtx_trn.ravel()
     cnf_mtx_tst = metrics.confusion_matrix(tst_y, prd_tst, labels)
@@ -132,7 +133,7 @@ def plot_evaluation_results(labels: np.ndarray, trn_y, prd_trn, tst_y, prd_tst):
                   'Precision': [tp_trn / (tp_trn + fp_trn), tp_tst / (tp_tst + fp_tst)]}
 
     fig, axs = plt.subplots(1, 2, figsize=(2 * HEIGHT, HEIGHT))
-    multiple_bar_chart(['Train', 'Test'], evaluation, ax=axs[0], title="Model's performance over Train and Test sets")
+    multiple_bar_chart(['Train', 'Test'], evaluation, ax=axs[0], title="Model's performance over Train and Test sets", showXTickLabels = showXTickLabels)
     plot_confusion_matrix(cnf_mtx_tst, labels, ax=axs[1])
 
 
