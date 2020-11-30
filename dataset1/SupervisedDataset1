@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-30T18:12:40.735Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15" etag="esSqyWfiCHe4-0DESrUW" version="13.10.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-30T18:44:47.869Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15" etag="RCx5XK_udjctMBFv5Ep7" version="13.10.4" type="github">
   <diagram id="KaexqXeGwiMuKF7mzq42" name="Page-1">
     <mxGraphModel dx="1113" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -121,8 +121,8 @@
         <mxCell id="2oJo6NesX2OGAvK4LQgh-35" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="360" y="120" width="30" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="2oJo6NesX2OGAvK4LQgh-36" value="&lt;span style=&quot;font-size: 10px&quot;&gt;choose the one with&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;best performance&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="160" width="110" height="30" as="geometry" />
+        <mxCell id="2oJo6NesX2OGAvK4LQgh-36" value="&lt;span style=&quot;font-size: 10px&quot;&gt;Apply algorithm and&lt;br&gt;choose the one with&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;best performance&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;endArrow=classic;endFill=0;" edge="1" parent="1" source="2oJo6NesX2OGAvK4LQgh-40" target="2oJo6NesX2OGAvK4LQgh-58">
           <mxGeometry relative="1" as="geometry" />
@@ -142,8 +142,8 @@
         <mxCell id="2oJo6NesX2OGAvK4LQgh-51" value="Balanced" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="230" y="270" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="2oJo6NesX2OGAvK4LQgh-53" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; text-decoration: none ; font-size: 10px&quot;&gt;choose the one with&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; text-decoration: none ; font-size: 10px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; text-decoration: none ; font-size: 10px&quot;&gt;best performance&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="660" y="155" width="120" height="40" as="geometry" />
+        <mxCell id="2oJo6NesX2OGAvK4LQgh-53" value="&lt;span style=&quot;font-size: 10px&quot;&gt;Apply algorithm and&lt;/span&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; text-decoration: none ; font-size: 10px&quot;&gt;choose the one with&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; text-decoration: none ; font-size: 10px&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: normal ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; text-decoration: none ; font-size: 10px&quot;&gt;best performance&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="660" y="160" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-55" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="480" y="330" width="30" height="40" as="geometry" />
@@ -175,8 +175,8 @@
         <mxCell id="2oJo6NesX2OGAvK4LQgh-63" value="Balanced" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="330" y="275" width="60" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="2oJo6NesX2OGAvK4LQgh-66" value="&lt;span style=&quot;font-size: 10px&quot;&gt;choose the one with&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;best performance&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="430" y="370" width="110" height="30" as="geometry" />
+        <mxCell id="2oJo6NesX2OGAvK4LQgh-66" value="&lt;span style=&quot;font-size: 10px&quot;&gt;Apply algorithm and&lt;/span&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;choose the one with&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;font-size: 10px&quot;&gt;&lt;span style=&quot;font-size: 10px&quot;&gt;best performance&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="375" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-69" value="Feature Selection + Feature Generation" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2oJo6NesX2OGAvK4LQgh-55" target="2oJo6NesX2OGAvK4LQgh-48">
           <mxGeometry x="1" y="-332" width="50" height="50" relative="1" as="geometry">
