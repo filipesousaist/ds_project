@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-30T18:46:04.385Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15" etag="jtBJzil7XFiQpd1ndquB" version="13.10.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-30T19:09:17.215Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.1 Safari/605.1.15" etag="F58ItsmBT-V9b1X31P_S" version="13.10.4" type="github">
   <diagram id="KaexqXeGwiMuKF7mzq42" name="Page-1">
     <mxGraphModel dx="1113" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -66,6 +66,18 @@
         <mxCell id="2oJo6NesX2OGAvK4LQgh-10" value="after FS and FG" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="630" y="260" width="60" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="2oJo6NesX2OGAvK4LQgh-11" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2oJo6NesX2OGAvK4LQgh-55" target="2oJo6NesX2OGAvK4LQgh-10">
+          <mxGeometry x="1" y="-332" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="960" y="190" as="sourcePoint" />
+            <mxPoint x="590" y="150" as="targetPoint" />
+            <mxPoint x="58" y="75" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2oJo6NesX2OGAvK4LQgh-39" value="Feature Selection&lt;br&gt;and Generation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2oJo6NesX2OGAvK4LQgh-11">
+          <mxGeometry x="0.1684" y="2" relative="1" as="geometry">
+            <mxPoint x="-39.61" y="-22.959999999999994" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-12" value="FS and FG" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="750" y="265" width="60" height="50" as="geometry" />
         </mxCell>
@@ -122,7 +134,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-48" value="after Extraction" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="630" y="365" width="60" height="60" as="geometry" />
+          <mxGeometry x="630" y="375" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=open;endFill=0;" edge="1" parent="1" source="2oJo6NesX2OGAvK4LQgh-51" target="2oJo6NesX2OGAvK4LQgh-63">
           <mxGeometry relative="1" as="geometry" />
@@ -167,19 +179,19 @@
           <mxGeometry x="430" y="375" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-69" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2oJo6NesX2OGAvK4LQgh-55" target="2oJo6NesX2OGAvK4LQgh-48">
-          <mxGeometry x="1" y="-75" width="50" height="50" relative="1" as="geometry">
+          <mxGeometry x="1" y="-332" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="540" y="350" as="sourcePoint" />
             <mxPoint x="660" y="380" as="targetPoint" />
-            <mxPoint x="26" y="5" as="offset" />
+            <mxPoint x="58" y="75" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-70" value="Feature Extraction" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2oJo6NesX2OGAvK4LQgh-69">
           <mxGeometry x="0.1684" y="2" relative="1" as="geometry">
-            <mxPoint x="-1.1999999999999993" y="-24.55999999999999" as="offset" />
+            <mxPoint x="9.89" y="-24.55999999999999" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2oJo6NesX2OGAvK4LQgh-72" value="Feature Extraction" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="750" y="370" width="60" height="50" as="geometry" />
+          <mxGeometry x="750" y="380" width="60" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
