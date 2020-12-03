@@ -29,13 +29,15 @@ def choose_grid(nr):
         return (nr // NR_COLUMNS, NR_COLUMNS) if nr % NR_COLUMNS == 0 else (nr // NR_COLUMNS + 1, NR_COLUMNS)
 
 
-def set_axes(xvalues: list, ax: plt.Axes = None, title: str = '', xlabel: str = '', ylabel: str = '', percentage=False, showXTickLabels: bool = False):
+def set_axes(xvalues: list, ax: plt.Axes = None, title: str = '', xlabel: str = '', ylabel: str = '', percentage=False, showXTickLabels: bool = False, yrange: tuple = None):
     if ax is None:
         ax = plt.gca()
     ax.set_title(title)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
-    if percentage:
+    if yrange:
+        ax.set_ylim(yrange[0], yrange[1])
+    elif percentage:
         ax.set_ylim(0.0, 1.0)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
@@ -65,8 +67,8 @@ def plot_line(xvalues: list, yvalues: list, ax: plt.Axes = None, title: str = ''
 
 
 def multiple_line_chart(xvalues: list, yvalues: dict, ax: plt.Axes = None, title: str = '',
-                        xlabel: str = '', ylabel: str = '', percentage=False):
-    ax = set_axes(xvalues, ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, percentage=percentage)
+                        xlabel: str = '', ylabel: str = '', percentage=False, yrange: tuple = None):
+    ax = set_axes(xvalues, ax=ax, title=title, xlabel=xlabel, ylabel=ylabel, percentage=percentage, yrange=yrange)
     ax = set_locators(xvalues, ax=ax)
 
     legend: list = []
