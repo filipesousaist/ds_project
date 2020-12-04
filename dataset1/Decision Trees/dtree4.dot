@@ -1,13 +1,13 @@
 digraph Tree {
 node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
 edge [fontname=helvetica] ;
-0 [label=<X<SUB>11</SUB> &le; 73.5<br/>entropy = 0.904<br/>samples = 269<br/>value = [183, 86]>, fillcolor="#f1bc96"] ;
-1 [label=<entropy = 0.631<br/>samples = 63<br/>value = [10, 53]>, fillcolor="#5eafea"] ;
+0 [label=<time &le; -0.774<br/>gini = 0.5<br/>samples = 293<br/>value = [146, 147]>, fillcolor="#fefeff"] ;
+1 [label=<gini = 0.119<br/>samples = 110<br/>value = [7, 103]>, fillcolor="#46a4e7"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-2 [label=<X<SUB>7</SUB> &le; 1.45<br/>entropy = 0.635<br/>samples = 206<br/>value = [173, 33]>, fillcolor="#ea995f"] ;
+2 [label=<diff(ejection_fraction,age) &le; -0.668<br/>gini = 0.365<br/>samples = 183<br/>value = [139, 44]>, fillcolor="#eda978"] ;
 0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
-3 [label=<entropy = 0.403<br/>samples = 162<br/>value = [149, 13]>, fillcolor="#e78c4a"] ;
+3 [label=<gini = 0.494<br/>samples = 65<br/>value = [29, 36]>, fillcolor="#d9ecfa"] ;
 2 -> 3 ;
-4 [label=<entropy = 0.994<br/>samples = 44<br/>value = [24, 20]>, fillcolor="#fbeade"] ;
+4 [label=<gini = 0.126<br/>samples = 118<br/>value = [110, 8]>, fillcolor="#e78a47"] ;
 2 -> 4 ;
 }
