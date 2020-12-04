@@ -191,7 +191,7 @@ def compute_centroids(data: pd.DataFrame, labels: np.ndarray) -> list:
     return centers
 
 
-def compute_mse(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> float:
+def compute_mse_old(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> float:
     n = len(X)
     centroid_per_record = [centroids[labels[i]] for i in range(n)]
     partial = X - centroid_per_record
@@ -199,3 +199,113 @@ def compute_mse(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> flo
     partial = [sum(el) for el in partial]
     partial = sum(partial)
     return math.sqrt(partial) / (n-1)
+
+
+# [1 2 3] [4 5 0]  
+# [-3 -3 3]
+# [9 9 9]
+# 27
+# sum(27 + ...) / n
+def compute_mse(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> float:
+    n = X.shape[0]
+    centroid_per_record = [centroids[labels[i]] for i in range(n)]
+    partial = X - centroid_per_record
+    partial = list(partial * partial)
+    partial = [sum(el) for el in partial]
+    partial = sum(partial) / n
+    return partial
+
+# [1 2 3] [4 5 0]  
+# [-3 -3 3]
+# [9 9 9]
+# 27
+# sqrt(27)
+# sum(sqrt(27) + ...) / n
+def compute_mae(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> float:
+    n = X.shape[0]
+    centroid_per_record = [centroids[labels[i]] for i in range(n)]
+    partial = X - centroid_per_record
+    partial = list(partial * partial)
+    partial = [sum(el) for el in partial]
+    partial = [math.sqrt(el) for el in partial]
+    partial = sum(partial) / n
+    return partial
+
+def compute_db(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> float:
+    n = X.shape[0]
+    k = len(centroids)
+    centroid_per_record = [centroids[labels[i]] for i in range(n)]
+
+    # Compute centroid diameters
+    centroid_diameters = [0 for _ in range(k)]
+    for i in range(n):
+        diam = np.linalg.norm(X[i] - centroid_per_record[i]) * 2
+        centroid_diameters[labels[i]] = \
+            max(centroid_diameters[labels[i]], diam)
+
+    # Compute centroid distances
+    centroid_distances = np.zeros((k, k))
+    for c1 in range(k):
+        for c2 in range(k):
+            if (c1 != c2):
+                diff = np.array(centroids[c1]) - np.array(centroids[c2])
+                centroid_distances[c1][c2] = np.linalg.norm(diff)
+
+    # Compute dbi
+    total = 0
+    ratio = np.zeros((k, k))
+    for c1 in range(k):
+        ratios = np.zeros((k,))
+        for c2 in range(k):
+            if (c1 != c2):
+                ratios[c2] = (centroid_diameters[c1] + centroid_diameters[c2]) / centroid_distances[c1][c2]
+        total += ratios.max()
+
+    return total / k
+
+def compute_dunn(X: np.ndarray, labels: np.ndarray, centroids: np.ndarray) -> float:
+    n = X.shape[0]
+    k = len(centroids)
+    centroid_per_record = [centroids[labels[i]] for i in range(n)]
+
+    # Compute max of centroid diameters
+    centroid_diameters = [0 for _ in range(k)]
+    for i in range(n):
+        diam = np.linalg.norm(X[i] - centroid_per_record[i]) * 2
+        centroid_diameters[labels[i]] = \
+            max(centroid_diameters[labels[i]], diam)
+    max_diam = max(centroid_diameters)
+
+    # Compute min centroid distances
+    centroid_distances = np.zeros((k, k))
+    diff = np.array(centroids[0]) - np.array(centroids[1])
+    min_dist = np.linalg.norm(diff) if n > 1 else 0 
+    for c1 in range(k):
+        for c2 in range(c1 + 1, k):
+            diff = np.array(centroids[c1]) - np.array(centroids[c2])
+            min_dist = min(min_dist, np.linalg.norm(diff))
+    return min_dist / max_diam
+
+
+#   4 . . . * . . . . . . .
+#   . . . * * . . . * . . .
+#   * * . . . . . . . . . .
+#   * * . . . . . . . . . *
+#   0 . . . . . . . . . . 11
+def test_metrics():
+    X = pd.DataFrame([
+        [0, 1], [0, 2], [1, 1], [1, 2],
+        [3, 3], [4, 3], [4, 4],
+        [8, 3],
+        [11, 1]
+    ])
+    labels = np.array([0, 0, 0, 0, 1, 1, 1, 2, 3])
+    centroids = compute_centroids(X, labels)
+
+    Xnp = X.to_numpy()
+
+    print("Centroids:\n", centroids)
+    print("MSE:\n", compute_mse(Xnp, labels, centroids))
+    print("MAE:\n", compute_mae(Xnp, labels, centroids))
+    print("DB:\n", compute_db(Xnp, labels, centroids))
+    print("Dunn:\n", compute_dunn(Xnp, labels, centroids))
