@@ -1,2 +1,2 @@
 # ds_project
-Data Science course project @ IST MEIC 2020/2021
+Analysis of "Heart Failure Prediction" and "QSAR oral toxicity" datasets: Project for Data Science course from MEIC @ IST 2020/2021
